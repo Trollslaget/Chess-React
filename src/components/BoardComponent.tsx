@@ -37,19 +37,7 @@ export const BoardComponent: FC<BoardProps> = ({
 			}
 		}
 	}
-	// функция, отвечающая за клик по ячейке
-	// function click(cell: Cell) {
-	// 	if (selectedCell && selectedCell !== cell && selectedCell.figure?.canMove(cell)) {
-	// 	  selectedCell.moveFigure(cell);
 
-	// 	  setSelectedCell(null);
-	// 	  updateBoard()
-	// 	} else {
-
-	// 		setSelectedCell(cell);
-
-	// 	}
-	//   }
 
 	const isComponentMounted = useComponentDidMount();
 
@@ -58,17 +46,12 @@ export const BoardComponent: FC<BoardProps> = ({
 			hightlightCells();
 		}
 	}, [selectedCell]);
-	// переписать на класс и убрать этот костыль
-	// useEffect(() => {
-	// 	setTimeout(() => hightlightCells(), 1);
-	// }, [selectedCell]);
 
-	// вычисляет на какие ячейки может перемещаться выбранная фигура
 	function hightlightCells() {
 		board.hightlightCells(selectedCell);
 		updateBoard();
 	}
-	// так как вычисления мы делаем внутри модели, перерисовки не происходит, для этого явно делаем копию доски и заставляем реакт перерендерить ее
+	
 	function updateBoard() {
 		const newBoard = board.getCopyBoard();
 		setBoard(newBoard);

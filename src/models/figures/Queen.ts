@@ -18,4 +18,3 @@ export class Queen extends Figure {
 		return false;
 	}
 }
-// оптимизировать конструктор

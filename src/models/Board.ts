@@ -43,7 +43,7 @@ export class Board {
 	public getCell(x: number, y: number) {
 		return this.cells[y][x];
 	}
-	// двумерным циклом пробегаемся по доске, получая в каждой строке потенциальную ячейку для хода, и проверяем это через метод canMove, передавая текущую ячейку
+
 	public hightlightCells(selectedCell: Cell | null) {
 		for (let i = 0; i < 8; i++) {
 			const row = this.cells[i];
@@ -51,21 +51,10 @@ export class Board {
 			for (let j = 0; j < row.length; j++) {
 				const target = row[j];
 				target.available = !!selectedCell?.figure?.canMove(target);
-				// явное преобразования в boolean чтобы ts не ругался
+				
 			}
 		}
-	} // сделать for each?
-	/**
-	  public highlightCells(selectedCell: Cell | null) {
-    for (let i = 0; i < this.cells.length; i++) {
-      const row = this.cells[i];
-      for (let j = 0; j < row.length; j++) {
-        const target = row[j];
-        target.available = !!selectedCell?.figure?.canMove(target)
-      }
-    }
-  }
-	 */
+	} 
 	private addPawns() {
 		for (let i = 0; i < 8; i++) {
 			new Pawn(Colors.BLACK, this.getCell(i, 1));

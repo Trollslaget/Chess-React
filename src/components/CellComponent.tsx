@@ -10,8 +10,7 @@ interface CellProps {
 
 export const CellComponent: FC<CellProps> = ({ cell, selected, click }) => {
 	return (
-		//  <div className={['cell',cell.color].join(' ')}></div>
-		// <div className={'cell ' + cell.color}>
+
 		<div
 			className={["cell", cell.color, selected ? "selected" : ""].join(" ")}
 			onMouseDown={() => click(cell)}
