@@ -10,7 +10,7 @@ export class Rook extends Figure {
 		this.name = FigureNames.ROOK;
 	}
 	canMove(target: Cell): boolean {
-		// если родительский класс возвращает false, то мы тоже не ебемся
+
 		if (!super.canMove(target)) return false;
 		if (this.cell.isEmptyVert(target)) return true;
 		if (this.cell.isEmptyHorizontal(target)) return true;

@@ -3,7 +3,7 @@ import { Board } from "../models/Board";
 import { Cell } from "../models/Cell";
 import { Player } from "../models/Player";
 import { CellComponent } from "./CellComponent";
-import { useComponentDidMount } from "./UseComponentDidMount";
+import { useComponentDidMount } from "../Hooks/UseComponentDidMount";
 
 interface BoardProps {
 	board: Board;
