@@ -10,7 +10,7 @@ export class King extends Figure {
 		this.name = FigureNames.KING;
 	}
 	canMove(target: Cell): boolean {
-		// если родительский класс возвращает false, то мы тоже не ебемся
+	
 		if (!super.canMove(target)) return false;
 
 		const dx = Math.abs(this.cell.x - target.x);

@@ -63,9 +63,15 @@
 .lost:last-of-type {
 	left: 65%;
 }
+/* .timer-btn-container {
+	padding: auto;
+	margin-left: 50%;
+	margin-right: 50%;
+} */
 .timer-btn {
 	text-decoration: none;
 
+	padding: auto;
 	display: inline-block;
 	width: 140px;
 	height: 50px;
