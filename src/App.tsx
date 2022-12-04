@@ -55,6 +55,7 @@ const App: FC = () => {
      function  restartHandlerApp () {
 		restart();
 		setCurrentPlayer(whitePlayer);
+		setDeadKing(null)
 	 }
 	
 	return (
